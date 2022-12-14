@@ -37,7 +37,7 @@ const DetailProduct = () => {
                             </div>
 
                             <div className="d-flex justify-content-between flex-end mt-3 mx-3">
-                                <h4 className="card-text">{detail.price}</h4>
+                                <h4 className="card-text">${detail.price}</h4>
                                 <button className="btn bg-green text-white mb-2" onClick={() => addToCart(detail)}>Añadir</button>
                             </div>
                         </div>
