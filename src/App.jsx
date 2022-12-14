@@ -40,14 +40,27 @@ function App() {
     return n;
   }
   const handleFavorites = (item) => {
-    const enFavorites = favorites.includes(item)
-    if (enFavorites) {
-      const updatedFavorites = favorites.filter((favorito) => favorito !== item)
-      setFavorites(updatedFavorites)
+    const sesion = window.localStorage.getItem('usuario')
+    const usuario = JSON.parse(sesion)
+    if (usuario !== null && usuario.activo) {
+      const enFavorites = favorites.includes(item)
+      if (enFavorites) {
+        const updatedFavorites = favorites.filter((favorito) => favorito !== item)
+        setFavorites(updatedFavorites)
+      } else {
+        const updatedFavorites = [...favorites]
+        updatedFavorites.push(item)
+        setFavorites(updatedFavorites)
+      }
     } else {
-      const updatedFavorites = [...favorites]
-      updatedFavorites.push(item)
-      setFavorites(updatedFavorites)
+      Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        text: 'Debes iniciar sesión para agregar productos.!',
+        title: 'Inicia Sesión',
+        showConfirmButton: false,
+        timer: 3500
+      })
     }
   }
   const handleFavoritesAll = (items) => {
@@ -65,7 +78,7 @@ function App() {
   const addToCart = (item) => {
     const sesion = window.localStorage.getItem('usuario')
     const usuario = JSON.parse(sesion)
-    if (usuario !== null) {
+    if (usuario !== null && usuario.activo) {
       const Toast = Swal.mixin({
         toast: true,
         position: 'bottom-end',
@@ -107,8 +120,6 @@ function App() {
         timer: 3500
       })
     }
-
-
   }
   const removeFromCart = (item) => {
     const itemIndex = cart.findIndex((product) => product.id === item.id)
