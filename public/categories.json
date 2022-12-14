@@ -10,7 +10,7 @@
         "features": [
             "Color: Azul",
             "Material: Jean",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -24,7 +24,7 @@
         "features": [
             "Color: Verde",
             "Material: Canelé",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -38,7 +38,7 @@
         "features": [
             "Color: Blanco",
             "Material: Satin",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -52,7 +52,7 @@
         "features": [
             "Color: Azul",
             "Material: Jean",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -66,7 +66,7 @@
         "features": [
             "Color: Azul",
             "Material: Jean",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -80,7 +80,7 @@
         "features": [
             "Color: Negro",
             "Material: Algodón",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -94,7 +94,7 @@
         "features": [
             "Color: Rosa",
             "Material: Algodón",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -108,7 +108,7 @@
         "features": [
             "Color: Rosa",
             "Material: Algodón",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -122,7 +122,7 @@
         "features": [
             "Color: Gris",
             "Material: Algodón",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -136,7 +136,7 @@
         "features": [
             "Color: Negro",
             "Material: Charol",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -150,7 +150,7 @@
         "features": [
             "Color: Negro",
             "Material: Tela",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -164,7 +164,7 @@
         "features": [
             "Color: Negro",
             "Material: Cuero",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     },
     {
@@ -178,7 +178,7 @@
         "features": [
             "Color: Dorado",
             "Material: Metal",
-            "Hecho: China"
+            "Hecho en: China"
         ]
     },
     {
@@ -192,7 +192,7 @@
         "features": [
             "Color: Negro y Rosa",
             "Material: Metal",
-            "Hecho: China"
+            "Hecho en: China"
         ]
     },
     {
@@ -206,7 +206,7 @@
         "features": [
             "Color: Negro",
             "Material: Metal",
-            "Hecho: Chile"
+            "Hecho en: Chile"
         ]
     }
 ]

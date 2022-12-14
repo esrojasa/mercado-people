@@ -1,12 +1,12 @@
 const Features = ({ features })=> {
     return(
-        <div className="features">
-            <p><strong>Características</strong></p>
-            <ul>
+        <div className="">
+            <p><strong>Características:</strong></p>
+            <ul className="list-grou">
                 {
                     features.map((features,i)=> {
                         return(
-                            <li key={i}>{ features }</li>
+                            <li className="list-group-item" key={i}>{ features }</li>
                         )
                     })
                 }
