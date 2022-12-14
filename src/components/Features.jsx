@@ -9,7 +9,6 @@ const Features = ({ features })=> {
                             <li key={i}>{ features }</li>
                         )
                     })
-
                 }
             </ul>
         </div>

@@ -65,7 +65,7 @@ function App() {
   const addToCart = (item) => {
     const sesion = window.localStorage.getItem('usuario')
     const usuario = JSON.parse(sesion)
-    if (usuario.activo) {
+    if (usuario !== null) {
       const Toast = Swal.mixin({
         toast: true,
         position: 'bottom-end',
@@ -77,7 +77,6 @@ function App() {
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
       })
-
       Toast.fire({
         icon: 'success',
         title: 'Producto Agregado al Carro de Compras.'
@@ -108,6 +107,7 @@ function App() {
         timer: 3500
       })
     }
+
 
   }
   const removeFromCart = (item) => {
