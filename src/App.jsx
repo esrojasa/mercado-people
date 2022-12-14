@@ -67,7 +67,7 @@ function App() {
     const updateList = [...favorites]
     items.forEach((element) => {
       const itemIndex = favorites.findIndex(f => f.id === element.id)
-      console.log(itemIndex);
+      
       if (itemIndex !== -1) {
         updateList.splice(itemIndex, 1);
       }
@@ -147,6 +147,7 @@ function App() {
   }
 
   const newItemCategories = (newItem) => {
+    console.log(newItem);
     const sesion = window.localStorage.getItem('usuario')
     const usuario = JSON.parse(sesion)
     newItem.user_id = usuario.id

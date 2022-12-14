@@ -20,7 +20,7 @@ const CreatePost = () => {
   
     const sendData = async (event) => {
         event.preventDefault()
-        formData.features = Object(formFeatures)
+        formData.features = Object.values(formFeatures)
         newItemCategories(formData)
         event.target.reset();
     }
