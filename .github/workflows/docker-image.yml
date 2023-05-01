@@ -28,10 +28,12 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t esrojasa/docker-mercado:0.0.2 .
+        docker build -t esrojasa/docker-mercado:latest .
         
     - name: Push Docker Image
       run: |
         docker push esrojasa/docker-mercado:0.0.2
+        docker push esrojasa/docker-mercado:latest
     
     
     #- name: Build the Docker image
