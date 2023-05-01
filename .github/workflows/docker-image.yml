@@ -29,21 +29,23 @@ jobs:
     - name: Docker login
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        NEW_VERSION: ${{ steps.version.outputs.version }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}        
         
       run: |
        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-       echo "New version: $NEW_VERSION!!!!"
-       
+             
     - name: Build Docker Image
+      env:
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t esrojasa/docker-mercado:0.0.2 .
+        docker build -t esrojasa/docker-mercado:#NEW_VERSION .
         docker build -t esrojasa/docker-mercado:latest .
         
     - name: Push Docker Image
+      env:
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push esrojasa/docker-mercado:0.0.2
+        docker push esrojasa/docker-mercado:#NEW_VERSION
         docker push esrojasa/docker-mercado:latest
         
     
