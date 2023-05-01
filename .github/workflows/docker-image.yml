@@ -38,14 +38,14 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t esrojasa/docker-mercado:#NEW_VERSION .
+        docker build -t esrojasa/docker-mercado:$NEW_VERSION .
         docker build -t esrojasa/docker-mercado:latest .
         
     - name: Push Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push esrojasa/docker-mercado:#NEW_VERSION
+        docker push esrojasa/docker-mercado:$NEW_VERSION
         docker push esrojasa/docker-mercado:latest
         
     
