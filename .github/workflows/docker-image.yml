@@ -25,7 +25,7 @@ jobs:
         minor_pattern: "feat:"
         format: "${major}.${minor}.${patch}-prerelease${increment}"
       id: version
-        
+      
     - name: Docker login
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
@@ -34,7 +34,7 @@ jobs:
         
       run:
        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-       echo "New version:$NEW_VERSION!!!"
+       echo "New version:" $NEW_VERSION
        
     - name: Build Docker Image
       run: |
@@ -45,7 +45,7 @@ jobs:
       run: |
         docker push esrojasa/docker-mercado:0.0.2
         docker push esrojasa/docker-mercado:latest
-    
+        
     
     #- name: Build the Docker image
      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
