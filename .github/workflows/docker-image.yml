@@ -31,7 +31,7 @@ jobs:
         
     - name: Push Docker Image
       run: |
-        docker push -t esrojasa/docker-mercado:0.0.2 
+        docker push -t esrojasa/docker-mercado:0.0.2
     
     
     #- name: Build the Docker image
